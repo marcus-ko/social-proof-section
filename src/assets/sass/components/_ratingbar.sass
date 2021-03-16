@@ -1,15 +1,22 @@
 .rating-bar--wrapper
-  width: 540px
+  width: 334px
+  position: relative
+  top: 20px
   .rating-bar--main-1,
   .rating-bar--main-2,
   .rating-bar--main-3
-    width: 440px
-    height: 60px
+    width: 100%
+    max-width: 385px
+    height: 66px
     border-radius: 8px
     background-color: hsl(300, 24%, 96%)
     margin-bottom: 1rem
+    flex-flow: column-reverse
     .rating-bar--stars
-      margin-left: 2rem
+      margin-left: 10rem
+      position: absolute
+      padding: 0
+      padding-bottom: 30px
       img
         padding-top: 21px
         position: relative
@@ -21,12 +28,41 @@
       margin-right: 1rem
       p 
         position: relative
-        left: -66px
+        left: 8px
         font-size: .82rem
         font-weight: 700
         padding-top: 24px
         color: hsl(300, 43%, 22%)
-  .rating-bar--main-2
-    margin-left: 40px
-  .rating-bar--main-3
-    margin-left: 80px
+        top: -13px
+@media only screen and (min-width: 1024px)
+  .rating-bar--wrapper
+    width: 540px
+    .rating-bar--main-1,
+    .rating-bar--main-2,
+    .rating-bar--main-3
+      width: 100%
+      max-width: 440px
+      height: 60px
+      border-radius: 8px
+      background-color: hsl(300, 24%, 96%)
+      margin-bottom: 1rem
+      flex-flow: row
+      margin-left: 0
+      .rating-bar--stars
+        margin-left: 2rem
+        position: relative
+        padding: 0
+      .rating-bar--description
+        margin-right: 1rem
+        p 
+          position: relative
+          left: -66px
+          font-size: .82rem
+          font-weight: 700
+          padding-top: 24px
+          color: hsl(300, 43%, 22%)
+          top: 0
+    .rating-bar--main-2
+      margin-left: 40px
+    .rating-bar--main-3
+      margin-left: 80px

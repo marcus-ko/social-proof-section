@@ -1,28 +1,28 @@
 .card-wrapper--1,
 .card-wrapper--2,
 .card-wrapper--3
-  display: inline-block
-  padding: 1.2rem
+  padding: .5rem
   .card.row
     background-color: hsl(300, 43%, 22%)
-    width: 350px
-    height: 230px
+    max-width: 340px
     border-radius: 8px
     display: inline-block
+    position: relative
+    height: 248px
     .card-profile
-      position: relative
+      position: absolute
       display: inline-block
-      left: -60px
-      top: 22px
+      left: 26px
+      top: 19px
       img
         padding: 1rem
         width: 80px
         border-radius: 60px
     .card-details
       display: inline-block
-      position: relative
-      top: 0
-      left: -57px
+      position: absolute
+      top: 39px
+      left: 112px
       text-align: left
       line-height: 1.4
       .card-details--name
@@ -37,9 +37,23 @@
         color: #fff
         font-size: .8rem
         line-height: 1.8
+        position: relative
+        top: 71px
 .card-wrapper--2
   position: relative
   top: 20px
 .card-wrapper--3
   position: relative
   top: 40px
+
+@media only screen and (min-width: 1024px)
+  .card-wrapper--1,
+  .card-wrapper--2,
+  .card-wrapper--3
+    display: inline-block
+    .card.row
+      max-width: 24vw
+      .card-copy
+        p  
+          font-size: .8rem
+
